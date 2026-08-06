@@ -56,9 +56,9 @@ export default function Contact() {
             >
               <div className="contact__channel-icon">
                 <Mail size={20} />
-              </div>
+              </div> 
               <div>
-                <small>Correo</small>
+                <small>Correo General</small>
                 <strong>{SITE.email}</strong>
               </div>
             </a>
