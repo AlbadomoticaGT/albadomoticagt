@@ -27,7 +27,7 @@ export const SITE = {
   /** WhatsApp number (digits only, with country code, no +) */
   whatsappNumber: "50259491380",
 
-  email: "guicho2112@gmail.com",
+  email: "contacto@albadomoticagt.com",
 
   /** Google Tag Manager container ID — replace with real ID before launch */
   gtmId: "GTM-XXXXXXX",
