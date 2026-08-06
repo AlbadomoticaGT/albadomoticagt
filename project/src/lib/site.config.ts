@@ -30,7 +30,7 @@ export const SITE = {
   email: "contacto@albadomoticagt.com",
 
   /** Google Tag Manager container ID — replace with real ID before launch */
-  gtmId: "GTM-XXXXXXX",
+  gtmId: "GTM-NCZJ4PNB",
 } as const;
 
 export const SERVICES = [
