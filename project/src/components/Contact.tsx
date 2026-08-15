@@ -1,7 +1,6 @@
 import { Phone, Mail, MessageCircle } from "lucide-react";
 import { whatsappLink, trackWhatsApp, phoneDisplay } from "@/lib/analytics";
 import { SITE } from "@/lib/site.config";
-import QuoteForm from "@/components/QuoteForm";
 
 export default function Contact() {
   return (
@@ -65,7 +64,6 @@ export default function Contact() {
           </div>
         </div>
 
-        <QuoteForm />
       </div>
     </section>
   );
