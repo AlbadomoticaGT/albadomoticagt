@@ -39,13 +39,13 @@ export const SERVICES = [
     title: "Seguridad Inteligente",
     short: "Cámaras WiFi, sensores de movimiento y aperturas con alertas en tiempo real.",
     description:
-      "Monitorea tu hogar o negocio desde cualquier lugar. Cámaras con visión nocturna, grabación en la nube, sensores de puertas y ventanas, y notificaciones instantáneas en tu celular.",
+      "Monitorea tu hogar desde cualquier lugar. Cámaras con visión nocturna, grabación en la nube, sensores de puertas y ventanas, y notificaciones instantáneas en tu celular.",
     icon: "shield",
   },
   {
     slug: "automatizacion-residencial",
     title: "Automatización Residencial",
-    short: "Iluminación, escenas, horarios y control por voz sin cambiar tu cableado.",
+    short: "Controla la iluminación existente desde tu celular o por voz, aprovechando la instalación de tu hogar cuando es compatible.",
     description:
       "Apagadores WiFi, control de cortinas, escenas automatizadas y comandos por voz con Alexa o Google Home. Transforma tu casa en un espacio inteligente sin obras.",
     icon: "home",
