@@ -20,12 +20,14 @@ export default function Footer() {
             </span>
           </a>
           <p className="footer__desc">
-            Seguridad inteligente, automatización residencial y comercial, e integración tecnológica
-            para hogares, apartamentos, oficinas y negocios en toda Guatemala.
+            Soluciones inteligentes para hogares y apartamentos. Más comodidad,
+            seguridad y control desde tu celular, con atención local en Ciudad de
+            Guatemala y municipios cercanos.
+            
           </p>
           <a
             className="footer__phone"
-            href={whatsappLink("Hola, me gustaría más información sobre domótica para mi hogar o negocio.")}
+            href={whatsappLink("Hola, me gustaría más información sobre las soluciones de Alba Domótica GT para mi hogar.")}
             onClick={() => trackWhatsApp("footer_whatsapp")}
             target="_blank"
             rel="noopener noreferrer"
@@ -57,7 +59,7 @@ export default function Footer() {
             <li><a href="#proceso">Cómo funciona</a></li>
             <li><a href="#adultos-mayores">Adultos mayores</a></li>
             <li><a href="#equipos">Equipos</a></li>
-            <li><a href="#contacto">Solicitar cotización</a></li>
+            <li><a href="#contacto">Hablar con un asesor</a></li>
           </ul>
         </div>
 
