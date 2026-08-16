@@ -5,7 +5,7 @@ export default function WhatsAppFloat() {
   return (
     <a
       className="whatsapp-float"
-      href={whatsappLink("Hola, me gustaría más información sobre domótica para mi hogar o negocio.")}
+      href={whatsappLink("Hola, me gustaría más información sobre las soluciones de Alba Domótica GT para mi hogar.")}
       aria-label={`Escribir por WhatsApp al ${phoneDisplay()}`}
       onClick={() => trackWhatsApp("float_button")}
       target="_blank"
