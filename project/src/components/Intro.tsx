@@ -11,12 +11,13 @@ export default function Intro() {
         </div>
         <div className="intro__body">
           <p>
-            Alba Domótica GT es una empresa guatemalteca que ayuda a las familias a hacer
-            sus hogares más cómodos, seguros y fáciles de controlar desde el celular.
+            Alba Domótica GT es una empresa guatemalteca especializada en soluciones inteligentes para
+            hogares y apartamentos. Ayudamos a que tu casa sea más cómoda, segura y fácil de controlar  
+            desde tu celular.
           </p>
           <p>
-            Integramos iluminación, accesos, cámaras y sensores para que puedas controlar y supervisar tu hogar desde cualquier lugar,
-            con instalación profesional y soporte local.
+            Integramos iluminación, accesos, cámaras y sensores para que puedas supervisar y controlar
+            tu hogar desde cualquier lugar, con instalación profesional y soporte local.
           </p>
         </div>
       </div>
