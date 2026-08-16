@@ -29,7 +29,10 @@ export default function Solutions() {
               <div>
                 <Lightbulb size={24} />
                 <h3>Espacios inteligentes</h3>
-                <p>Apagadores WiFi, escenas, horarios y control por voz sin cambiar tu cableado.</p>
+                <p>Automatiza la instalación eléctrica que ya tienes. Con interruptores
+                inteligentes no necesitas cambiar cada bombillo por uno inteligente ni
+                romper paredes. Controla la iluminación existente desde tu celular o por voz
+                y crea horarios, escenas y automatizaciones para mayor comodidad.</p>
               </div>
               <a
                 href={whatsappLink("Hola, me interesa la solución de Espacios Inteligentes (apagadores WiFi, escenas, control por voz).")}
