@@ -11,7 +11,7 @@ const STEPS = [
   {
     num: "02",
     title: "Instalación profesional",
-    desc: "Instalamos y configuramos cada dispositivo sin romper paredes ni reemplazar el cableado existente.",
+    desc: "Instalamos y configuramos los dispositivos recomendados tras el diagnóstico, procurando aprovechar la instalación existente.",
     icon: <Zap size={24} />,
   },
   {
@@ -66,11 +66,12 @@ export default function Process() {
           </strong>
         </div>
         <p>
-          Opciones para apartamentos, casas, oficinas y negocios. Armamos la propuesta según el tamaño
-          y las necesidades de tu espacio.
+          Paquetes disponibles: Control Básico, Apartamento Inteligente,
+          Automatización Completa y Seguridad + Control. Adaptamos cada
+          solución según el espacio y los equipos que necesites.
         </p>
         <a
-          href={whatsappLink("Hola, me gustaría ver opciones y precios de domótica para mi espacio.")}
+          href={whatsappLink("Hola, me gustaría conocer los paquetes Control Básico, Apartamento Inteligente, Automatización Completa y Seguridad + Control.")}
           onClick={() => trackWhatsApp("process_packages")}
           target="_blank"
           rel="noopener noreferrer"
