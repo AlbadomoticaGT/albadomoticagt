@@ -22,7 +22,7 @@ export default function Contact() {
           <div className="contact__channels">
             <a
               className="contact__channel"
-              href={whatsappLink("Hola, me gustaría más información sobre domótica para mi hogar o negocio.")}
+              href={whatsappLink("Hola, me gustaría más información sobre las soluciones de Alba Domótica GT para mi hogar.")}
               onClick={() => trackWhatsApp("contact_whatsapp")}
               target="_blank"
               rel="noopener noreferrer"
