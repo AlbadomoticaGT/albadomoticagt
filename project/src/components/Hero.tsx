@@ -1,6 +1,5 @@
 import {
   Sparkles,
-  ArrowUpRight,
   ArrowDownRight,
   Lightbulb,
   Camera,
@@ -15,7 +14,6 @@ import { whatsappLink, trackWhatsApp, trackScheduleVisit } from "@/lib/analytics
 const BENEFITS = [
   "Domótica residencial",
   "Seguridad inteligente",
-  "Automatización de oficinas",
   "Integración con Alexa",
   "Integración con Google Home",
   "Diagnóstico sin costo",
@@ -36,21 +34,14 @@ export default function Hero() {
             <Sparkles size={15} /> Tecnología para vivir mejor
           </div>
           <h1>
-            Domótica Inteligente para <em>Hogares y Negocios</em> en Guatemala
+            Tu casa, más cómoda. <em> Sin obras ni complicaciones </em>
           </h1>
           <p>
-            Controla iluminación, cámaras, accesos, sensores y automatizaciones desde tu celular con
-            instalación profesional y soporte local.
+            Controla luces, cámaras y accesos desde tu celular. Nosotros revisamos tu
+            instalación, lo dejamos funcionando y te enseñamos a usarlo.
           </p>
 
           <div className="hero__actions">
-            <a
-              className="button button--dark"
-              href="#contacto"
-              onClick={() => trackScheduleVisit("hero_quote")}
-            >
-              Solicitar Cotización <ArrowUpRight size={18} />
-            </a>
             <a
               className="button button--clay"
               href={whatsappLink("Hola, me gustaría agendar una visita técnica de diagnóstico sin costo.")}
@@ -58,7 +49,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Calendar size={18} /> Agendar Visita Técnica
+              <Calendar size={18} /> Agendar Diagnóstico
             </a>
             <a
               className="button button--outline"
