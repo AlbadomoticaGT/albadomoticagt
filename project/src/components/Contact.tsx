@@ -15,8 +15,8 @@ export default function Contact() {
           </div>
           <h2>Hablemos de tu espacio.</h2>
           <p>
-            Cuéntanos qué quieres automatizar y coordinamos una visita de diagnóstico sin costo.
-            Atención local en todo Guatemala.
+           Cuéntanos qué quieres automatizar y coordinamos una visita de diagnóstico sin costo.
+            Atendemos Ciudad de Guatemala y municipios cercanos.
           </p>
 
           <div className="contact__channels">
