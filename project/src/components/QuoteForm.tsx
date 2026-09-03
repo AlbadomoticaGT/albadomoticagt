@@ -99,7 +99,7 @@ export default function QuoteForm() {
       trackLead(leadSource);
 
       try {
-        await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-quote-notification`, {
+        const notification = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-quote-notification`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -115,8 +115,12 @@ export default function QuoteForm() {
             lead_source: leadSource,
           }),
         });
-      } catch {
-        // Email notification is best-effort; form submission still succeeds
+
+        if (!notification.ok) {
+          console.error("No se pudo enviar la notificación por correo.");
+        }
+      } catch (emailError) {
+        console.error("Error enviando notificación por correo:", emailError);
       }
 
       navigate("/gracias");

@@ -6,7 +6,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Client-Info, Apikey",
 };
 
-const NOTIFICATION_EMAIL = "guicho2112@gmail.com";
+const NOTIFICATION_EMAIL = "contacto@albadomotica.com";
 
 Deno.serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
@@ -67,7 +67,7 @@ Deno.serve(async (req: Request) => {
           Authorization: `Bearer ${resendApiKey}`,
         },
         body: JSON.stringify({
-          from: "Alba Domótica GT <noreply@albadomotica.com>",
+          from: "Alba Domótica GT <contacto@albadomotica.com>",
           to: NOTIFICATION_EMAIL,
           subject,
           text: textBody,
@@ -78,6 +78,7 @@ Deno.serve(async (req: Request) => {
       if (!res.ok) {
         const errText = await res.text();
         console.error("Resend API error:", errText);
+        return new Response(JSON.stringify({ success: false, error: "No se pudo enviar la notificación por correo." }), { status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" } });
       }
     } else {
       console.log("Email notification (RESEND_API_KEY not configured):", textBody);
