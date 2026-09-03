@@ -6,7 +6,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Client-Info, Apikey",
 };
 
-const NOTIFICATION_EMAIL = "contacto@albadomotica.com";
+const NOTIFICATION_EMAIL = "guicho2112@gmail.com";
 
 Deno.serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
@@ -67,7 +67,7 @@ Deno.serve(async (req: Request) => {
           Authorization: `Bearer ${resendApiKey}`,
         },
         body: JSON.stringify({
-          from: "Alba Domótica GT <contacto@albadomotica.com>",
+          from: "Alba Domótica GT <contacto@albadomoticagt.com>",
           to: NOTIFICATION_EMAIL,
           subject,
           text: textBody,
