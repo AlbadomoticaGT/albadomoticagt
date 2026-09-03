@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "@/components/Landing";
+import Cotizador from "@/components/Cotizador";
 import Thanks from "@/pages/Thanks";
 
 function HomePage() {
@@ -9,7 +10,12 @@ function HomePage() {
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", "Haz tu hogar más cómodo, seguro y fácil de controlar. Domótica e instalación profesional en Ciudad de Guatemala. Oferta de inicio Q2,700.");
   }, []);
-  return <Landing />;
+  return (
+    <>
+      <Landing />
+      <Cotizador />
+    </>
+  );
 }
 
 function NotFoundPage() {
