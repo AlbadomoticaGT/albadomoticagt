@@ -99,11 +99,10 @@ export default function QuoteForm() {
       trackLead(leadSource);
 
       try {
-        const notification = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-quote-notification`, {
+        const notification = await fetch("/api/send-quote-notification", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
           },
           body: JSON.stringify({
             name: data.name,
@@ -117,10 +116,21 @@ export default function QuoteForm() {
         });
 
         if (!notification.ok) {
-          console.error("No se pudo enviar la notificación por correo.");
+          const notificationError = await notification.json().catch(() => null);
+          console.error("No se pudo enviar la notificación por correo:", notificationError);
+          setError(
+            "Tu solicitud quedó registrada, pero no pudimos enviar la notificación interna. No necesitas repetir el formulario; revisaremos la configuración del correo."
+          );
+          setSubmitting(false);
+          return;
         }
       } catch (emailError) {
         console.error("Error enviando notificación por correo:", emailError);
+        setError(
+          "Tu solicitud quedó registrada, pero hubo un problema al enviar la notificación interna. No necesitas repetir el formulario."
+        );
+        setSubmitting(false);
+        return;
       }
 
       navigate("/gracias");
