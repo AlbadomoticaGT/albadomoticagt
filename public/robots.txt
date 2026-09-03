@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block informational/academic queries from indexing service pages
+Disallow: /*?*curso
+Disallow: /*?*informacion
+Disallow: /*?*academico
+
+Sitemap: https://www.albadomoticagt.com/sitemap.xml
