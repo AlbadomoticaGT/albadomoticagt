@@ -1,0 +1,149 @@
+import {
+  ArrowRight, Check, ChevronDown, Clock3, Home, Lightbulb, LockKeyhole,
+  MessageCircle, ShieldCheck, Smartphone, Sparkles, Users, Zap
+} from "lucide-react";
+import QuoteForm from "@/components/QuoteForm";
+import type { ReactNode } from "react";
+import { SITE } from "@/lib/site.config";
+import { trackWhatsApp, whatsappLink } from "@/lib/analytics";
+
+const HERO_IMAGE = "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1400&h=1000&fit=crop";
+const LIVING_IMAGE = "https://images.pexels.com/photos/7534561/pexels-photo-7534561.jpeg?auto=compress&cs=tinysrgb&w=1000&h=900&fit=crop";
+const SENIOR_IMAGE = "https://images.pexels.com/photos/7551647/pexels-photo-7551647.jpeg?auto=compress&cs=tinysrgb&w=1000&h=900&fit=crop";
+const SECURITY_IMAGE = "https://images.pexels.com/photos/3205735/pexels-photo-3205735.jpeg?auto=compress&cs=tinysrgb&w=1000&h=900&fit=crop";
+
+const WA = "Hola, quiero información sobre el paquete de Q2,700 para mi hogar.";
+
+export default function Landing() {
+  return (
+    <div className="landing">
+      <header className="topbar">
+        <div className="shell topbar__inner">
+          <a href="#inicio" className="brand brand--new" aria-label="Alba Domótica GT">
+            <span className="brand-mark"><span /><span /><span /></span>
+            <span><b>ALBA</b><small>DOMÓTICA GT</small></span>
+          </a>
+          <nav className="topnav">
+            <a href="#soluciones">Soluciones</a>
+            <a href="#oferta">Oferta</a>
+            <a href="#proceso">Cómo funciona</a>
+            <a href="#faq">Preguntas</a>
+          </nav>
+          <a className="button button--wa button--small" href={whatsappLink(WA)} onClick={() => trackWhatsApp("topbar")} target="_blank" rel="noreferrer">
+            <MessageCircle size={17} /> WhatsApp
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section className="new-hero" id="inicio">
+          <div className="shell new-hero__grid">
+            <div className="new-hero__copy">
+              <div className="pill"><Sparkles size={15} /> Domótica hecha para Guatemala</div>
+              <h1>Tu casa puede ser <em>más cómoda</em> sin complicarte la vida.</h1>
+              <p className="new-hero__lead">Controla luces, TV, ventiladores, aire acondicionado, cámaras y accesos desde tu celular o por voz. Nosotros instalamos, configuramos y te enseñamos.</p>
+              <div className="new-hero__actions">
+                <a className="button button--primary" href="#oferta">Ver oferta Q2,700 <ArrowRight size={18} /></a>
+                <a className="button button--ghost" href={whatsappLink("Hola, quiero cotizar una solución de domótica para mi casa o apartamento.")} onClick={() => trackWhatsApp("hero_quote")} target="_blank" rel="noreferrer">Cotizar por WhatsApp <MessageCircle size={18} /></a>
+              </div>
+              <div className="trust-row">
+                <span><Check size={16} /> Instalación profesional</span>
+                <span><Check size={16} /> Soporte local</span>
+                <span><Check size={16} /> Diagnóstico sin costo</span>
+              </div>
+            </div>
+            <div className="new-hero__visual">
+              <img src={HERO_IMAGE} alt="Sala moderna con tecnología inteligente" />
+              <div className="hero-card hero-card--price"><small>Paquete inicial</small><strong>Q2,700</strong><span>6 interruptores + control IR + instalación</span></div>
+              <div className="hero-card hero-card--status"><span className="status-dot" /> Casa conectada <b>●</b></div>
+            </div>
+          </div>
+        </section>
+
+        <section className="offer" id="oferta">
+          <div className="shell">
+            <div className="offer__head">
+              <div><span className="section-label">LA FORMA MÁS FÁCIL DE EMPEZAR</span><h2>No necesitas automatizar toda tu casa.</h2></div>
+              <p>Empieza por los ambientes que más utilizas. Después puedes ampliar tu sistema cuando quieras.</p>
+            </div>
+            <div className="offer-card">
+              <div className="offer-card__main">
+                <div className="offer-badge">OFERTA DE INICIO</div>
+                <h3>Haz inteligente tu hogar</h3>
+                <div className="offer-price"><span>Q</span>2,700</div>
+                <p>Una solución completa para comenzar a disfrutar la domótica sin hacer una gran obra.</p>
+                <a className="button button--light" href={whatsappLink(WA)} onClick={() => trackWhatsApp("offer")} target="_blank" rel="noreferrer">Quiero esta oferta <ArrowRight size={18} /></a>
+              </div>
+              <div className="offer-card__list">
+                {[
+                  "6 interruptores inteligentes para iluminación",
+                  "1 control IR para TV, ventiladores y A/C compatibles",
+                  "Instalación profesional",
+                  "Configuración de la aplicación",
+                  "Capacitación para que sepas usarlo",
+                  "6 meses de garantía y soporte postventa",
+                ].map((item) => <div key={item}><Check size={19} /> <span>{item}</span></div>)}
+              </div>
+            </div>
+            <p className="offer-note">* El precio final puede variar si tu instalación requiere equipos adicionales o trabajos especiales. Primero revisamos tu espacio.</p>
+          </div>
+        </section>
+
+        <section className="solutions-new" id="soluciones">
+          <div className="shell">
+            <div className="center-heading"><span className="section-label">¿QUÉ PUEDES HACER?</span><h2>Menos tareas. Más control.</h2><p>La idea no es llenar tu casa de aparatos. Es hacer más sencillas las cosas que haces todos los días.</p></div>
+            <div className="feature-grid">
+              <Feature icon={<Lightbulb />} title="Iluminación" text="Apaga, enciende y programa luces desde el celular o por voz." image={LIVING_IMAGE} />
+              <Feature icon={<Smartphone />} title="Entretenimiento" text="Controla TV y otros equipos compatibles con un solo comando." />
+              <Feature icon={<ShieldCheck />} title="Seguridad" text="Cámaras, sensores y alertas para saber qué pasa cuando no estás." image={SECURITY_IMAGE} />
+              <Feature icon={<LockKeyhole />} title="Accesos" text="Cerraduras y portones compatibles controlados desde tu celular." />
+            </div>
+          </div>
+        </section>
+
+        <section className="local-proof">
+          <div className="shell local-proof__grid">
+            <div><span className="section-label">PENSADO PARA EL MERCADO LOCAL</span><h2>Servicio cercano, explicado en sencillo.</h2><p>Trabajamos con propietarios de casas y apartamentos, profesionales, familias y pequeños negocios en Ciudad de Guatemala y municipios cercanos.</p></div>
+            <div className="local-proof__stats"><div><strong>GT</strong><span>Atención local</span></div><div><Clock3 /><span>Coordinamos visita</span></div><div><Users /><span>Soporte directo</span></div></div>
+          </div>
+        </section>
+
+        <section className="seniors-new">
+          <div className="shell seniors-new__grid">
+            <img src={SENIOR_IMAGE} alt="Adulto mayor disfrutando de tecnología en casa" />
+            <div><span className="section-label">PARA ADULTOS MAYORES</span><h2>La tecnología también puede dar independencia.</h2><p>Luces por voz, control desde el celular, cortinas automatizadas y accesos inteligentes pueden hacer el día a día más sencillo para un adulto mayor y dar tranquilidad a su familia.</p><ul><li><Check /> Menos movimientos innecesarios</li><li><Check /> Control por voz</li><li><Check /> Supervisión y alertas</li></ul><a className="text-link" href={whatsappLink("Hola, quiero información sobre una solución de domótica para un adulto mayor.")} onClick={() => trackWhatsApp("seniors_new")} target="_blank" rel="noreferrer">Quiero conocer esta opción <ArrowRight size={17} /></a></div>
+          </div>
+        </section>
+
+        <section className="process-new" id="proceso">
+          <div className="shell"><div className="center-heading"><span className="section-label">CÓMO FUNCIONA</span><h2>De la idea a tu casa funcionando.</h2></div><div className="steps"><Step n="01" title="Cuéntanos qué necesitas" text="Por WhatsApp o mediante el formulario. No necesitas saber de tecnología." /><Step n="02" title="Revisamos tu espacio" text="Evaluamos instalación, equipos y necesidades antes de recomendarte algo." /><Step n="03" title="Instalamos y configuramos" text="Dejamos todo listo, te enseñamos y te acompañamos después de la instalación." /></div></div>
+        </section>
+
+        <section className="why-new">
+          <div className="shell"><div className="why-new__grid"><div><span className="section-label">¿POR QUÉ ALBA?</span><h2>No vendemos tecnología por venderla.</h2><p>Primero entendemos qué quieres resolver. Luego proponemos una solución proporcional a tu espacio y presupuesto.</p></div><div className="why-list"><p><Zap /> <span><b>Empieza pequeño.</b> Amplía cuando tenga sentido.</span></p><p><Home /> <span><b>Tu casa primero.</b> Aprovechamos lo que ya tienes cuando es compatible.</span></p><p><ShieldCheck /> <span><b>Instalación y soporte.</b> No te dejamos solo después de venderte el equipo.</span></p></div></div></div>
+        </section>
+
+        <section className="quote-section" id="cotizacion">
+          <div className="shell quote-section__grid">
+            <div className="quote-intro"><span className="section-label">COTIZA SIN COMPLICACIONES</span><h2>Cuéntanos qué quieres automatizar.</h2><p>Déjanos tus datos y te contactaremos para coordinar un diagnóstico. Si prefieres una respuesta más rápida, escríbenos directamente por WhatsApp.</p><div className="quote-contact"><MessageCircle /> <div><small>WhatsApp</small><strong>{SITE.phoneDisplay}</strong></div></div></div>
+            <QuoteForm />
+          </div>
+        </section>
+
+        <section className="faq" id="faq">
+          <div className="shell"><div className="center-heading"><span className="section-label">PREGUNTAS FRECUENTES</span><h2>Antes de empezar.</h2></div><div className="faq-grid"><Faq q="¿Tengo que cambiar todos mis bombillos?" a="No necesariamente. En muchos casos podemos automatizar la iluminación mediante interruptores inteligentes compatibles con la instalación existente." /><Faq q="¿Necesito tener Alexa o Google Home?" a="No. Puedes controlar los dispositivos desde el celular. Alexa o Google Home son opciones adicionales para control por voz." /><Faq q="¿El precio de Q2,700 es definitivo?" a="Es una oferta de inicio. Incluye los elementos indicados, pero primero revisamos tu instalación para confirmar compatibilidad y cualquier requerimiento adicional." /><Faq q="¿Dónde trabajan?" a="Nuestro enfoque inicial es Ciudad de Guatemala y municipios cercanos. Consulta por WhatsApp para confirmar cobertura en tu zona." /></div></div>
+        </section>
+
+        <section className="final-cta"><div className="shell final-cta__inner"><div><span className="section-label">EMPECEMOS</span><h2>Tu casa no tiene que ser complicada para ser inteligente.</h2></div><a className="button button--light" href={whatsappLink(WA)} onClick={() => trackWhatsApp("final_cta")} target="_blank" rel="noreferrer">Hablar por WhatsApp <MessageCircle size={18} /></a></div></section>
+      </main>
+
+      <footer className="new-footer"><div className="shell new-footer__inner"><div><a className="brand brand--new" href="#inicio"><span className="brand-mark"><span /><span /><span /></span><span><b>ALBA</b><small>DOMÓTICA GT</small></span></a><p>Domótica práctica, instalación profesional y soporte local.</p></div><div><strong>Contacto</strong><a href={whatsappLink(WA)} target="_blank" rel="noreferrer">WhatsApp {SITE.phoneDisplay}</a><a href={`mailto:${SITE.email}`}>{SITE.email}</a></div><div><strong>Ciudad de Guatemala</strong><span>Guatemala, Guatemala</span><span>© 2026 Alba Domótica GT</span></div></div></footer>
+    </div>
+  );
+}
+
+function Feature({ icon, title, text, image }: { icon: ReactNode; title: string; text: string; image?: string }) {
+  return <article className={`feature ${image ? "feature--image" : ""}`}>{image && <img src={image} alt="" /> }<div className="feature__body"><div className="feature__icon">{icon}</div><h3>{title}</h3><p>{text}</p></div></article>;
+}
+function Step({ n, title, text }: { n: string; title: string; text: string }) { return <article className="step"><span>{n}</span><h3>{title}</h3><p>{text}</p></article>; }
+function Faq({ q, a }: { q: string; a: string }) { return <details><summary>{q}<ChevronDown size={18} /></summary><p>{a}</p></details>; }
