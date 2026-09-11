@@ -4,3 +4,21 @@
 @media(max-width:600px){.shell{width:min(100% - 28px,1160px)}.topbar__inner{height:66px}.topbar .button{padding:9px 12px}.new-hero h1{font-size:44px}.new-hero__lead{font-size:16px}.new-hero__visual>img{height:360px;border-radius:20px}.hero-card--price{bottom:15px;width:205px;padding:14px}.hero-card--price strong{font-size:31px}.offer,.solutions-new,.seniors-new,.process-new,.why-new,.quote-section,.faq{padding:75px 0}.offer-card,.quote-form__grid{grid-template-columns:1fr}.offer-card__main,.offer-card__list{padding:28px}.feature-grid{grid-template-columns:1fr}.feature{min-height:280px}.local-proof__stats{grid-template-columns:1fr}.new-footer__inner{grid-template-columns:1fr}.quote-form{padding:22px}.final-cta{padding:55px 0}.final-cta h2{font-size:36px}}
 
 .brand--logo img{display:block;width:auto;height:62px;object-fit:contain}.brand--logo-footer img{height:82px}@media(max-width:600px){.brand--logo img{height:50px}.brand--logo-footer img{height:72px}}
+
+/* Paleta corporativa AlbaDomoticaGT: azul, amarillo y fondos luminosos */
+:root{color:#10233f;background:#f6f9fe;--ink:#10233f;--muted:#617086;--cream:#f6f9fe;--paper:#fff;--green:#0757c7;--green2:#0b6de0;--clay:#d89200;--line:#d8e2f0;--shadow:0 24px 70px rgba(16,35,63,.12)}
+.topbar{background:rgba(246,249,254,.94);border-bottom-color:rgba(216,226,240,.85)}
+.topnav,.trust-row{color:#52657f}.topnav a:hover,.trust-row svg{color:#0b6de0}
+.button--primary{background:#f2b400;color:#10233f}.button--ghost{border-color:#b9cbe3}
+.pill{color:#0757c7;background:#e4f0ff}.new-hero h1 em{color:#d89200}
+.hero-card{background:rgba(255,255,255,.96);box-shadow:0 18px 45px rgba(16,35,63,.18)}
+.section-label{color:#bcdcff}.offer__head p,.offer-card__main p{color:#dbeaff}
+.offer-card{background:#08489f;border-color:rgba(255,255,255,.18)}
+.offer-badge{background:#f2b400;color:#10233f}
+.offer-card__list{background:#f3f8ff}.offer-card__list div{border-bottom-color:#d8e2f0}
+.offer-card__list svg,.seniors-new li svg{color:#0b6de0}.offer-note{color:#bcd4f3}
+.feature__icon{background:#e4f0ff;color:#0757c7}
+.local-proof{background:#eaf3ff}.local-proof__stats div{background:#fff;border-color:#ceddf0}
+.quote-section{background:#edf4fd}.quote-contact svg{background:#dcecff;color:#0757c7}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:#0b6de0;box-shadow:0 0 0 3px #dcecff}
+.new-footer{background:#062a63;color:#c5d8f2}
