@@ -8,7 +8,7 @@ function HomePage() {
   useEffect(() => {
     document.title = "Domótica para tu hogar en Guatemala | Alba Domótica GT";
     const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Haz tu hogar más cómodo, seguro y fácil de controlar. Domótica e instalación profesional en Ciudad de Guatemala. Oferta de inicio Q2,700.");
+    if (meta) meta.setAttribute("content", "Haga su hogar más cómodo, seguro y fácil de controlar. Instalación y configuración profesional en Guatemala. Promociones de 6 puntos por Q1,799 y 8 puntos por Q2,399.");
   }, []);
   return (
     <>
