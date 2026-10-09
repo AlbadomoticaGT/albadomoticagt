@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "@/components/Landing";
-import Cotizador from "@/components/Cotizador";
 import Thanks from "@/pages/Thanks";
 
 function HomePage() {
@@ -10,12 +9,7 @@ function HomePage() {
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", "Haga su hogar más cómodo, seguro y fácil de controlar. Instalación y configuración profesional en Guatemala. Promociones de 6 puntos por Q1,799 y 8 puntos por Q2,399.");
   }, []);
-  return (
-    <>
-      <Landing />
-      <Cotizador />
-    </>
-  );
+  return <Landing />;
 }
 
 function NotFoundPage() {
