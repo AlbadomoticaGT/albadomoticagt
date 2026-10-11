@@ -2,7 +2,20 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/domotica-guatemala", "destination": "/index.html" },
+    { "source": "/instalacion-domotica-guatemala", "destination": "/index.html" },
+    { "source": "/cuanto-cuesta-automatizar-casa-guatemala", "destination": "/index.html" },
+    { "source": "/gracias", "destination": "/index.html" }
+  ],
   "headers": [
+    {
+      "source": "/gracias",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, follow" },
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, proxy-revalidate" }
+      ]
+    },
     {
       "source": "/(.*)",
       "headers": [
